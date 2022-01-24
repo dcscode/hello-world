@@ -1,2 +1,2 @@
 # hello-world
-tutorial repo
+Hi! Today I'm starting my web developer bootcamp. 
