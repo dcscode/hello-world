@@ -30,6 +30,11 @@ class ScoreBoard {
         this.outs++;
     }
     
+    addInning(score) {
+        this.innings.push(score);
+    }
+
+    //add more methods
 
 }
 
