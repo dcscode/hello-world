@@ -10,8 +10,13 @@ function init() {
 class ScoreBoard {
 
     static constructor() {
+        //properties
         let data = []; //scoreBoard.data could be something like JSON data
+        let balls = [];
+        let strikes = 0;
+        let outs = 0;
+        let innings = [];
     }
-    //properties
+    
 
 }
