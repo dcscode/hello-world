@@ -6,21 +6,18 @@ function Person(first, last, age, gender, interests) { //constructor function; a
     };
     this.age = age;
     this.gender = gender;
-    let pronouns = function () {
-        let pronoun = '';
-        if (this.gender === 'male'|| this.gender === 'man') {
-            this.pronoun = 'He';
-        }
-        else if (this.gender === 'female' || this.gender === 'woman') {
-            this.pronoun = 'She';
-        }
-        else {
-            this.pronoun = 'They';
-        }
+    if (this.gender === 'male' || this.gender === 'man') {
+        this.gender = "He";
+    }
+    else if (this.gender === 'female' || this.gender === 'woman') {
+        this.gender = 'She';
+    }
+    else if (this.gender === 'non-binary' || this.gender === null) {
+        this.gender = 'They';
     }
     this.interests = interests;
     this.bio = function() {
-        console.log(this.name.first + ' ' + this.name.last + " is " + this.age + ' years old. ' + this.pronoun + ' likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+        console.log(this.name.first + ' ' + this.name.last + " is " + this.age + ' years old. ' + this.gender + ' likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
     };
     this.greeting = function() {
         console.log('Hi! I\'m ' + this.name.first + '.');
