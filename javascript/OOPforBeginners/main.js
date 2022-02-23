@@ -23,7 +23,7 @@ function Person(first, last, age, gender, interests) { //constructor function; a
             break;
         }
         else if (interests.indexOf(interest) === interests.length -2 ) {
-            interestString += " and ";
+            interestString += ", and "; //oxford comma!!!! 
         }
         else {
             interestString += ", ";
@@ -40,7 +40,7 @@ function Person(first, last, age, gender, interests) { //constructor function; a
 //new keyword creates a new object INSTANCE
 //new keyword, followed by function name and its required (if any) parameters
 //this instance is stored in a variable
-const person1 = new Person('Eivor', 'Varrinsdottir', 27, 'female',['flyting', 'hunting', 'archery']); 
+const person1 = new Person('Eivor', 'Varrinsdottir', 27, 'female',['flyting', 'hunting', 'archery', 'fishing']); 
 const person2 = new Person('Scamp', 'Stovall', 16, 'male', ['napping', 'bird watching']); //these variables contain the objects and their contents (properties)
 
 
