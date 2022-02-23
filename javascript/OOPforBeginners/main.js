@@ -16,8 +16,21 @@ function Person(first, last, age, gender, interests) { //constructor function; a
         this.gender = 'They';
     }
     this.interests = interests;
+    let interestString = "";
+    for (let interest of interests) {
+        interestString += interest;
+        if (interests.indexOf(interest) === interests.length - 1) {
+            break;
+        }
+        else if (interests.indexOf(interest) === interests.length -2 ) {
+            interestString += " and ";
+        }
+        else {
+            interestString += ", ";
+        }
+    }
     this.bio = function() {
-        console.log(this.name.first + ' ' + this.name.last + " is " + this.age + ' years old. ' + this.gender + ' likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+        console.log(this.name.first + ' ' + this.name.last + " is " + this.age + ' years old. ' + this.gender + ' likes ' + interestString + '.');
     };
     this.greeting = function() {
         console.log('Hi! I\'m ' + this.name.first + '.');
@@ -27,8 +40,9 @@ function Person(first, last, age, gender, interests) { //constructor function; a
 //new keyword creates a new object INSTANCE
 //new keyword, followed by function name and its required (if any) parameters
 //this instance is stored in a variable
-const person1 = new Person('Bob', 'Smith', 32, 'male',['music', 'skiing']); 
-const person2 = new Person('Sarah', 'Knight', 23, 'female', ['animation', 'ultimate frisbee']); //these variables contain the objects and their contents (properties)
+const person1 = new Person('Eivor', 'Varrinsdottir', 27, 'female',['flyting', 'hunting', 'archery']); 
+const person2 = new Person('Scamp', 'Stovall', 16, 'male', ['napping', 'bird watching']); //these variables contain the objects and their contents (properties)
+
 
 //these new objects are stored in a namespace
     //to access their properties and methods, you have to call the namespace
